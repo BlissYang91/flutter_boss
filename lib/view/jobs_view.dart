@@ -29,10 +29,10 @@ class JobList extends State<JobsTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 242, 242, 245),
+      backgroundColor: const Color.fromARGB(255, 242, 242, 245),
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(
+        title: const Text(
           'Android',
           style: TextStyle(fontSize: 20.0, color: Colors.white),
         ),
