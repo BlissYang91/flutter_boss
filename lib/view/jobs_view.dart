@@ -45,18 +45,18 @@ class JobList extends State<JobsTab> {
   Widget buildJobItem(BuildContext context, int index) {
     Job job = _jobs[index];
     var jobItem = InkWell(
-      // onTap: () {
-      //   showDialog<bool>(
-      //       context: context,
-      //       builder: (context) {
-      //         const AlertDialog(
-      //           content: Text(
-      //             "敬请期待",
-      //             style: TextStyle(fontSize: 20.0),
-      //           ),
-      //         );
-      //       });
-      // },
+      onTap: () {
+        showDialog<bool>(
+            context: context,
+            builder: (context) {
+              return const AlertDialog(
+                content: Text(
+                  "敬请期待",
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              );
+            });
+      },
       child: JobListItem(job),
     );
     return jobItem;
