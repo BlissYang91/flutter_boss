@@ -58,7 +58,7 @@ class HomeState extends State<BossAPP> with SingleTickerProviderStateMixin {
           tabs: <IconTab>[
             IconTab(
               icon: _currentIndex == INDEX_JOB
-                  ? "images/ic_main_tab_company_pre.png" : "images/ic_main_tab_company_nor.png",
+                  ? "images/ic_main_tab_position_pre.png" : "images/ic_main_tab_position_nor.png",
               text: "职位",
               color:_currentIndex == INDEX_JOB ? _kPrimaryColor : Colors.grey[900]
             ),
@@ -70,13 +70,13 @@ class HomeState extends State<BossAPP> with SingleTickerProviderStateMixin {
             ),
             IconTab(
               icon: _currentIndex == INDEX_MESSAGE
-                  ? "images/ic_main_tab_company_pre.png" : "images/ic_main_tab_company_nor.png",
+                  ? "images/ic_main_tab_message_pre.png" : "images/ic_main_tab_message_nor.png",
               text: "消息",
               color:_currentIndex == INDEX_MESSAGE ? _kPrimaryColor : Colors.grey[900]
             ),
             IconTab(
               icon: _currentIndex == INDEX_MINE
-                  ? "images/ic_main_tab_company_pre.png" : "images/ic_main_tab_company_nor.png",
+                  ? "images/ic_main_tab_mine_pre.png" : "images/ic_main_tab_mine_nor.png",
               text: "我的",
               color:_currentIndex == INDEX_MINE ? _kPrimaryColor : Colors.grey[900]
             ),
