@@ -33,7 +33,7 @@ class JobList extends State<JobsTab> {
       appBar: AppBar(
         elevation: 0.0,
         title: const Text(
-          'Android',
+          'Flutter 2.10.2',
           style: TextStyle(fontSize: 20.0, color: Colors.white),
         ),
       ),
