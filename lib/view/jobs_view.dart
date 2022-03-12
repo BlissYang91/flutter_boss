@@ -18,6 +18,42 @@ class JobList extends State<JobsTab> {
     getJobList();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 242, 242, 245),
+      appBar: AppBar(
+        elevation: 0.0,
+        title: const Text(
+          'Flutter 2.10.2',
+          style: TextStyle(fontSize: 20.0, color: Colors.white),
+        ),
+      ),
+      body:
+          ListView.builder(itemCount: _jobs.length, itemBuilder: buildJobItem),
+    );
+  }
+
+  Widget buildJobItem(BuildContext context, int index) {
+    Job job = _jobs[index];
+    var jobItem = InkWell(
+      onTap: () {
+        showDialog<bool>(
+            context: context,
+            builder: (context) {
+              return const AlertDialog(
+                content: Text(
+                  "敬请期待",
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              );
+            });
+      },
+      child: JobListItem(job),
+    );
+    return jobItem;
+  }
+
   void getJobList() {
     setState(() {
       _jobs = Job.fromJson("""
@@ -91,41 +127,5 @@ class JobList extends State<JobsTab> {
         }
         """);
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 242, 242, 245),
-      appBar: AppBar(
-        elevation: 0.0,
-        title: const Text(
-          'Flutter 2.10.2',
-          style: TextStyle(fontSize: 20.0, color: Colors.white),
-        ),
-      ),
-      body:
-          ListView.builder(itemCount: _jobs.length, itemBuilder: buildJobItem),
-    );
-  }
-
-  Widget buildJobItem(BuildContext context, int index) {
-    Job job = _jobs[index];
-    var jobItem = InkWell(
-      onTap: () {
-        showDialog<bool>(
-            context: context,
-            builder: (context) {
-              return const AlertDialog(
-                content: Text(
-                  "敬请期待",
-                  style: TextStyle(fontSize: 20.0),
-                ),
-              );
-            });
-      },
-      child: JobListItem(job),
-    );
-    return jobItem;
   }
 }
