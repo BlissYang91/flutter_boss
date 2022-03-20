@@ -65,7 +65,7 @@ class JobListItem extends StatelessWidget {
                       bottom: 5.0,
                     ),
                   ),
-                  new Divider(),
+                  const Divider(),
                   Row(
                     children: [
                       Padding(
